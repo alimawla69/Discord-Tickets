@@ -75,6 +75,7 @@ CALLBACK_URI="http://localhost:8080/api/callback"
 DOMAIN="http://localhost:8080/"
 DATABASE_URI="mongodb+srv://USER:PASS@CLUSTER_NAME.mongodb.net/DATABASE?retryWrites=true&w=majority"
 PREFIX="!"
+GUILDID="688077913463324683"
 ```
 A. you can get BOT_TOKEN & CLIENT_SECRET & CLIENT_ID in https://discord.com/developers/applications
 
