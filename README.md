@@ -64,7 +64,7 @@ CALLBACK_URI="http://localhost:8080/api/callback" //You'r callbackURL
 DATABASE_URI="" //You'r mongodbURL
 PREFIX=""//You'r bot prefix
 GUILDID=""//You'r serverid
-``
+```
 example
 ```
 PORT=8080
