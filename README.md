@@ -6,7 +6,7 @@
   
 
 Open tickets in website for discord server
-  [ScreenShot](https://luffydev.xyz/)
+  [ScreenShot](https://prnt.sc/136jtxx)
 
 ## Installation
 
