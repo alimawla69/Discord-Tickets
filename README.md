@@ -72,7 +72,7 @@ A. you can get BOT_TOKEN & CLIENT_SECRET & CLIENT_ID in https://discord.com/deve
 4. now you need to add your MongoDB url:
 	 1. Go to [MongoDB Cloud](https://cloud.mongodb.com/) and create a account
 	 2. Create Cluster and make your free database and get the link e.g `mongodb+srv://USER:PASS@CLUSTER_NAME.mongodb.net/DATABASE?retryWrites=true&w=majority`
-	 3. go to [config/db.json](/config/db.json) file and paste the url there
+	 3. go to .env file and paste the url in DATABASE_URI
   
 
 5. now you are done just run the app using
@@ -87,7 +87,7 @@ $ npm run dev
 
   
 
-and WebChat will be running at [localhost:3000](http://localhost:8080)
+and WebChat will be running at [localhost:8080](http://localhost:8080)
 
   
 
