@@ -6,7 +6,7 @@
   
 
 Open tickets in website for discord server
-  [ScreenShot](https://cdn.discordapp.com/attachments/682236325981978685/845017832449769492/unknown.png)
+  ![ScreenShot](https://cdn.discordapp.com/attachments/682236325981978685/845017832449769492/unknown.png)
 
 ## Installation
 
