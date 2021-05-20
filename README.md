@@ -1,7 +1,7 @@
 
   
 
-# Discord Tickets
+# [Discord Tickets](https://discord.gg/HFZRWUC)
 
   
 
