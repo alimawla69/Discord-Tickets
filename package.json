@@ -1,0 +1,32 @@
+{
+  "name": "discord-tickets",
+  "version": "1.0.0",
+  "description": "Open tickets in website for discord server",
+  "main": "index.js",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "axios": "^0.21.1",
+    "cookie-parser": "^1.4.5",
+    "discord.js": "^12.5.3",
+    "dotenv": "^9.0.2",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.12.10",
+    "morgan": "^1.10.0",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luffy909/Discord-Tickets.git"
+  },
+  "author": "_Luffy99#7907 (https://discord.gg/HFZRWUC)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luffy909/Discord-Tickets/issues"
+  },
+  "homepage": "https://github.com/Luffy909/Discord-Tickets#readme"
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include("../components/head.ejs") %>
+
+  <body>
+    <div style=" display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 75vh; ">
+      <img src=<%-avatar%> style=" display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 50%; " width="150" />
+      <h2>
+        <%=guild.name.charAt(0).toUpperCase() + guild.name.slice(1)%> Ticktets
+      </h2><Br>
+      <%if(user && !guild.members.cache.get(user.id)){%>
+        <h1>You to join the server <a href="/discord">click here<a /> to join</h1>
+        <%}else if(!guildData || guildData.types.length==0){%>
+          <h1>There's no data types for this server</h1>
+          <%}else{%>
+            <%guildData.types.forEach(r=>{%>
+              <%if(user){%>
+
+                <button type="submit" onclick="create('<%=r.ID%>')" class="btn btn-primary">
+                  <%=r.type%>
+                </button>
+                <Br>
+                <%}else {%>
+                  <button onclick="login()" class="btn btn-primary">
+                    <%=r.type%>
+                  </button>
+                  <Br>
+                  <%}%>
+                    <%})%>
+                      <%}%>
+    </div>
+    <script>
+      function login() {
+        swal.fire({
+          title: 'Oh no!',
+          text: "You must be logged in to open tickets!",
+          icon: 'error',
+          showCancelButton: true,
+          confirmButtonText: 'Login',
+          cancelButtonText: 'Cancel',
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            window.location.href = "/api/login"
+          }
+        })
+      }
+      function create(type) {
+        let tic = "<%=guildData && guildData.channels.find(r=>r.owner==user.id)%>"
+        $('button').prop('disabled', true);
+        if (tic) {
+          Swal.fire(
+            'Oh no!',
+            "You can't open only 1 ticket",
+            'error'
+          )
+          return
+        }
+        let timerInterval
+        Swal.fire({
+          title: 'Your ticket is being created!',
+          timer: 5000,
+          timerProgressBar: true,
+          didOpen: () => {
+            Swal.showLoading()
+            timerInterval = setInterval(() => {
+              const content = Swal.getHtmlContainer()
+              if (content) {
+                const b = content.querySelector('b')
+                if (b) {
+                  b.textContent = Swal.getTimerLeft()
+                }
+              }
+            }, 100)
+          },
+          willClose: () => {
+            clearInterval(timerInterval)
+          }
+        }).then((result) => {
+          let invite
+          fetch("/api/create?userID=<%=user.id%>&guildID=<%=guild.id%>&type=" + type, {
+            method: "get",
+          }).then(res => res.json())
+            .then(data => {
+              if (result.dismiss === Swal.DismissReason.timer) {
+                Swal.fire({
+                  type: "success",
+                  icon: "success",
+                  html: 'success your ticket has been created!<br><a target="_blank" href=' + data.url + '>click here</a> to auto redirect to the ticket ',
+                });
+              }
+            })
+        })
+
+
+
+      }
+    </script>
+    <%- include("../components/scripts.ejs") %>
+      <%- include("../components/footer.ejs") %>
+  </body>
+
+</html>
