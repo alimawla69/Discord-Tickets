@@ -79,14 +79,19 @@ PREFIX="!"
 A. you can get BOT_TOKEN & CLIENT_SECRET & CLIENT_ID in https://discord.com/developers/applications
 
 
+4. now you need to add callback to you'r discord bot
+- go to https://discord.com/developers/applications/
+- select your bot
+- go to OAuth2 ex: https://discord.com/developers/applications/487312058174662500/oauth2
+- then go to add redirects then type http://localhost:8080/api/callback
 
-4. now you need to add your MongoDB url:
+5. now you need to add your MongoDB url:
 	 1. Go to [MongoDB Cloud](https://cloud.mongodb.com/) and create a account
 	 2. Create Cluster and make your free database and get the link e.g `mongodb+srv://USER:PASS@CLUSTER_NAME.mongodb.net/DATABASE?retryWrites=true&w=majority`
 	 3. go to .env file and paste the url in DATABASE_URI
   
 
-5. now you are done just run the app using
+6. now you are done just run the app using
 
   
 
@@ -104,7 +109,7 @@ and WebChat will be running at [localhost:8080](http://localhost:8080)
 
   
 
-6. you can also host it to public by running
+7. you can also host it to public by running
 
   
 
