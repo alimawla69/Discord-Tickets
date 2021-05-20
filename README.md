@@ -56,15 +56,26 @@ $ npm i
   
 3. now you need to add file named .env and type the required items bellow
 ```buh
+PORT=8080// You'r port
+BOT_TOKEN="" //You'r bot TOKEN
+CLIENT_ID="" //You'r bot ID
+CLIENT_SECRET=""//You'r bot Client secret
+CALLBACK_URI="http://localhost:8080/api/callback" //You'r callbackURL
+DATABASE_URI="" //You'r mongodbURL
+PREFIX=""//You'r bot prefix
+GUILDID=""//You'r serverid
+``
+example
+```
 PORT=8080
-BOT_TOKEN=""
-CLIENT_ID=""
-CLIENT_SECRET=""
+BOT_TOKEN="ODQ0OTE0MDQ4MjA5NTE4NjEy.YKZVhg.vWvp6CMAYrwmx4Sfc1P44RstNUTHwgSA"
+CLIENT_ID="487312058174662500"
+CLIENT_SECRET="kMZmV_kLMqs6yjxvmk8goefTsCr7DEF6"
 CALLBACK_URI="http://localhost:8080/api/callback"
 DOMAIN="http://localhost:8080/"
-DATABASE_URI=""
-PREFIX=""
-```
+DATABASE_URI="mongodb+srv://USER:PASS@CLUSTER_NAME.mongodb.net/DATABASE?retryWrites=true&w=majority"
+PREFIX="!"
+``
 A. you can get BOT_TOKEN & CLIENT_SECRET & CLIENT_ID in https://discord.com/developers/applications
 
 
