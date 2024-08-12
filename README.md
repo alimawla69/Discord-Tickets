@@ -123,8 +123,8 @@ $ npm run start
   
 ## Problems, Bugs and Suggestions
 
-in case you saw any Problems, Bugs and Suggestions you can tell me in the [issues](https://github.com/Luffy909/Discord-Tickets) OR [Discord Server](https://discord.gg/fRXckx4r)
+in case you saw any Problems, Bugs and Suggestions you can tell me in the [issues](https://github.com/Luffy909/Discord-Tickets) OR [Discord Server](https://discord.gg/rr-dev)
 
-and i will fix and your suggetions and tell you in news channel in [Discord Server](https://discord.gg/fRXckx4r)
+and i will fix and your suggetions and tell you in news channel in [Discord Server](https://discord.gg/rr-dev)
 
-## Ali Mawla (https://discord.gg/fRXckx4r) All rights reserved.
+## Ali Mawla (https://discord.gg/rr-dev) All rights reserved.
